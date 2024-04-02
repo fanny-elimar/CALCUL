@@ -4,6 +4,7 @@
 max-width: 1000px;
 margin-left: auto;
 margin-right: auto;
+
 }
 
 /* boutons */
@@ -144,7 +145,7 @@ main {
     background-image: url('../images/cosmic-160340_640.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     /*justify-content: center;*/
@@ -361,10 +362,10 @@ height: 50px;
 /* Footer */
 
 footer {
-position: sticky;
 width: 100%;
-display: flex;
 border: solid 1px;
+display: flex;
+height: auto;
 }
 
 /*JS*/
