@@ -55,16 +55,23 @@ body  {
     }
 
 /* header */
-header {
-    position: fixed;
-    width: 1000px;
+@media (width<600px) {
+    .header__container {
+        flex-direction: column;
+    }
+    .header__title {
+        color : goldenrod;
+        text-align: center;
+    }
 }
-
 .header__container {
     background-color: rgb(1, 1, 43);
     border-bottom: 1px solid goldenrod;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+@media (width>=600px) {
 .header__wrapper {
     display: grid;
     grid-template-columns: 3fr 6fr 3fr;
@@ -74,7 +81,6 @@ header {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
 .header__title {
     color : goldenrod;
     grid-column: 2;
@@ -82,7 +88,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
+}
+
+
+
 
 .header__calc-choice {
     display: flex;
