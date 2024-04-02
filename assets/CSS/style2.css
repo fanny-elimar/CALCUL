@@ -361,7 +361,7 @@ height: 50px;
 /* Footer */
 
 footer {
-
+position: sticky;
 width: 100%;
 display: flex;
 border: solid 1px;
