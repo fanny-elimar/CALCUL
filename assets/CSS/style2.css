@@ -152,6 +152,7 @@ main {
     }
 
     .game-area__wrapper {
+        opacity:0;
         display: grid;
         grid-template-columns: 2fr 3fr 3fr 3fr 2fr;
         grid-gap: 5px;

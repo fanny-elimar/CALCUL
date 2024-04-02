@@ -341,6 +341,7 @@ let timerOn = true;
 let timerInterval;
 
 $('#btn-start').click((e) => {
+    $('.game-area__wrapper').css('opacity',1),
     $('#btn-start').attr("disabled", "disabled").css('opacity','0.7');
     $('.input-rep').attr('readonly',false);
 
@@ -377,7 +378,7 @@ else if (!timerOn) {
 
     function validation () {
         
-        let points = temps+1
+        let points =0
         let reponse1 = $('#input1').val()
         let reponse2 = $('#input2').val()
         let reponse3 = $('#input3').val()
@@ -393,7 +394,7 @@ else if (!timerOn) {
             points +=10
             $('#input1').css({"border" : 'dotted 6px lime', "color" : "lime"})
             $('#bonneReponse1').text(rAnswer1).css({"color":"red", "opacity" : "0"})
-        } else {points -=5
+        } else {
             $('#input1').css({"border" : 'dotted 6px red'})
             $('#bonneReponse1').text(rAnswer1).css({"color":"red"})
         }
@@ -401,7 +402,7 @@ else if (!timerOn) {
             points +=10
             $('#input2').css({"border" : 'dotted 6px lime', "color" : "lime"})
             $('#bonneReponse2').text(rAnswer2).css({"color":"red", "opacity" : "0"})
-        } else {points -=5
+        } else {
             $('#input2').css({"border" : 'dotted 6px red'})
             $('#bonneReponse2').text(rAnswer2).css({"color":"red"})
         }
@@ -409,7 +410,7 @@ else if (!timerOn) {
             points +=10
             $('#input3').css({"border" : 'dotted 6px lime', "color" : "lime"})
             $('#bonneReponse3').text(rAnswer3).css({"color":"red", "opacity" : "0"})
-        } else {points -=5
+        } else {
             $('#input3').css({"border" : 'dotted 6px red'})
             $('#bonneReponse3').text(rAnswer3).css({"color":"red"})
         }
@@ -417,7 +418,7 @@ else if (!timerOn) {
             points +=10
             $('#input4').css({"border" : 'dotted 6px lime', "color" : "lime"})
             $('#bonneReponse4').text(rAnswer4).css({"color":"red", "opacity" : "0"})
-        } else {points -=5
+        } else {
             $('#input4').css({"border" : 'dotted 6px red'})
             $('#bonneReponse4').text(rAnswer4).css({"color":"red"})
         }
@@ -425,7 +426,7 @@ else if (!timerOn) {
             points +=10
             $('#input5').css({"border" : 'dotted 6px lime', "color" : "lime"})
             $('#bonneReponse5').text(rAnswer5).css({"color":"red", "opacity" : "0"})
-        } else {points -=5
+        } else {
             $('#input5').css({"border" : 'dotted 6px red'})
             $('#bonneReponse5').text(rAnswer5).css({"color":"red"})
         }
@@ -433,7 +434,7 @@ else if (!timerOn) {
             points +=10
             $('#input6').css({"border" : 'dotted 6px lime', "color" : "lime"})
             $('#bonneReponse6').text(rAnswer6).css({"color":"red", "opacity" : "0"})
-        } else {points -=5
+        } else {
             $('#input6').css({"border" : 'dotted 6px red'})
             $('#bonneReponse6').text(rAnswer6).css({"color":"red"})
         }
@@ -441,7 +442,7 @@ else if (!timerOn) {
             points +=10
             $('#input7').css({"border" : 'dotted 6px lime', "color" : "lime"})
             $('#bonneReponse7').text(rAnswer7).css({"color":"red", "opacity" : "0"})
-        } else {points -=5
+        } else {
             $('#input7').css({"border" : 'dotted 6px red'})
             $('#bonneReponse7').text(rAnswer7).css({"color":"red"})
         }
@@ -449,7 +450,7 @@ else if (!timerOn) {
             points +=10
             $('#input8').css({"border" : 'dotted 6px lime', "color" : "lime"})
             $('#bonneReponse8').text(rAnswer8).css({"color":"red", "opacity" : "0"})
-        } else {points -=5
+        } else {
             $('#input8').css({"border" : 'dotted 6px red'})
             $('#bonneReponse8').text(rAnswer8).css({"color":"red"})
         }
@@ -457,7 +458,7 @@ else if (!timerOn) {
             points +=10
             $('#input9').css({"border" : 'dotted 6px lime', "color" : "lime"})
             $('#bonneReponse9').text(rAnswer9).css({"color":"red", "opacity" : "0"})
-        } else {points -=5
+        } else {
             $('#input9').css({"border" : 'dotted 6px red'})
             $('#bonneReponse9').text(rAnswer9).css({"color":"red"})
         }
@@ -465,7 +466,7 @@ else if (!timerOn) {
             points +=10
             $('#input10').css({"border" : 'dotted 6px lime', "color" : "lime"})
             $('#bonneReponse10').text(rAnswer10).css({"color":"red", "opacity" : "0"})
-        } else {points -=5
+        } else {
             $('#input10').css({"border" : 'dotted 6px red'})
             $('#bonneReponse10').text(rAnswer10).css({"color":"red"})
         }
