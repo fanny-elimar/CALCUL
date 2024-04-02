@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>La course aux calculs</title>
+    <link rel="stylesheet" href="assets/CSS/reset.css">
+    <link rel="stylesheet" href="assets/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/CSS/style2.css">
+    
+
+</head>
+<body class="flux">
+    <header class="header">
+        <div class="header__container flux header__wrapper">
+            <div class="header__title">
+                <h1> La course aux calculs</h1>
+            </div>
+            <div class="header__calc-choice">
+                <button id="btn-addition" name="addition" type="button" class="header__btn-calc">+</button>
+                <button id="btn-soustraction" name="soustraction" type="button" class=" header__btn-calc">-</button>
+                <button id="btn-mix" name="mix" type="button" class="header__btn-calc">+/-</button>
+            </div>
+            <div class="header__niv-choice">
+                <input type="image" src="assets/images/etoile-niv1.png" id="btn-niv1" name="niv1" type="button" class="header__btn-niv">
+                <input type="image" src="assets/images/etoile-niv2.png" id="btn-niv2" name="niv2" type="button" class="header__btn-niv">
+                <input type="image" src="assets/images/etoile-niv3.png" id="btn-niv3" name="niv3" type="button" class="header__btn-niv">
+            </div>   
+            <div class="header__start">
+                <button class="button"  id="btn-start">Commencer</button>
+            </div>
+        </div>
+    </header>
+    <main class="game-area flux">
+        <div class="game-area__wrapper">
+            <div class="game-area__cell-1">
+                <span id="calc1" class="calc">
+                </span>
+            </div>
+            <div class="game-area__cell-2">
+                <div class="col-4"></div>
+                <div class="col-4">
+                <input class="input-rep" type="number" readonly="true" id="input1"></div>
+                <div class="col-4">
+                <p class="bonneReponse">
+                    <span id="bonneReponse1">
+                    </span>
+                </p></div>
+            </div>
+            <div class="game-area__cell-3">
+                <span id="calc2" class="calc">
+                </span>
+            </div>
+            <div class="game-area__cell-4">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input class="input-rep" type="number" readonly="true" id="input2">
+                </div>
+                <div class="col-4">
+                    <p class="bonneReponse"><span id="bonneReponse2"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="game-area__cell-5">
+                <span id="calc3" class="calc"></span>
+            </div>
+            <div class="game-area__cell-6">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input class="input-rep" type="number" readonly="true" id="input3">
+                </div>
+                <div class="col-4">
+                    <p class="bonneReponse"><span id="bonneReponse3"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="game-area__cell-7">
+                <span id="calc4" class="calc"></span>
+            </div>
+            <div class="game-area__cell-8">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input class="input-rep" type="number" readonly="true" id="input4">
+                </div>
+                <div class="col-4">
+                    <p class="bonneReponse"><span id="bonneReponse4"></span>
+                </p>
+                </div>
+            </div>
+            <div class="game-area__cell-9">
+                <span id="calc5" class="calc"></span>
+            </div>
+            <div class="game-area__cell-10">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input class="input-rep" type="number" readonly="true" id="input5">
+                </div>
+                <div class="col-4">
+                    <p class="bonneReponse"><span id="bonneReponse5"></span>
+                </p>
+                </div>
+            </div>
+            <div class="game-area__cell-11">
+                <span id="calc6" class="calc"></span>
+            </div>
+            <div class="game-area__cell-12">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input class="input-rep" type="number" readonly="true" id="input6">
+                </div>
+                <div class="col-4">
+                    <p class="bonneReponse"><span id="bonneReponse6"></span>
+                </p>
+                </div>
+            </div>
+            <div class="game-area__cell-13">
+                <span id="calc7" class="calc"></span>
+            </div>
+            <div class="game-area__cell-14">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input class="input-rep" type="number" readonly="true" id="input7">
+                </div>
+                <div class="col-4">
+                    <p class="bonneReponse"><span id="bonneReponse7"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="game-area__cell-15">
+                <span id="calc8" class="calc"></span>
+            </div>
+            <div class="game-area__cell-16">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input class="input-rep" type="number" readonly="true" id="input8">
+                </div>
+                <div class="col-4">
+                    <p  class="bonneReponse"><span id="bonneReponse8"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="game-area__cell-17">
+                <span id="calc9" class="calc"></span>
+            </div>
+            <div class="game-area__cell-18">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input class="input-rep" type="number" readonly="true" id="input9">
+                </div>
+                <div class="col-4">
+                    <p class="bonneReponse"><span id="bonneReponse9"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="game-area__cell-19">
+                <span id="calc10" class="calc"></span>
+            </div>
+            <div class="game-area__cell-20">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input class="input-rep" type="number" readonly="true" id="input10">
+                </div>
+                <div class="col-4">
+                    <p class="bonneReponse"><span id="bonneReponse10"></span>
+                </p>
+                </div>
+            </div>
+            <div class="game-area__score">
+                <img src="assets/images/star-158502_640.png" class="game-area__score-star">
+                <div id="div-score"></div>
+                <img src="assets/images/star-158502_640.png" class="game-area__score-star">
+            </div>
+            <div id="reponses" class="hidden">
+                <ul id="liste-reponses">
+                    <li id="rep1"></li>
+                    <li id="rep2"></li>
+                    <li id="rep3"></li>
+                    <li id="rep4"></li>
+                    <li id="rep5"></li>
+                    <li id="rep6"></li>
+                    <li id="rep7"></li>
+                    <li id="rep8"></li>
+                    <li id="rep9"></li>
+                    <li id="rep10"></li>
+                </ul>
+            </div>
+            <div class="game-area__timer-area" id="zone-timer">
+                <img src="assets/images/hourglass-23654_640.png" class="game-area__timer-image">
+                <div class="game-area__timer-text" id="timer">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+            <div class="footer__container flux">
+                <div class="col">
+                    <button class="button" type="button" id="btn-valider">Valider</button>
+                    <button type="button" id="btn-reload" class="button">Rejouer</button>
+                    
+                    <a href="logout.php" type="button" class="button">Accueil</a>
+                    
+                </div>
+                
+            </div>
+    </footer>
+
+
+<script src="assets/JQUERY/jQuery2.js"></script>
+<script src="script4.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+/* Flux */
+
+.flux {
+max-width: 1000px;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* boutons */
+.button {
+    background-color: goldenrod;
+    border-radius: 100px;
+    box-shadow: rgba(156, 187, 44, .2) 0 -25px 18px -14px inset,rgba(156, 187, 44, .15) 0 1px 2px,rgba(156, 187, 44, .15) 0 2px 4px,rgba(156, 187, 44, .15) 0 4px 8px,rgba(156, 187, 44, .15) 0 8px 16px,rgba(156, 187, 44, .15) 0 16px 32px;
+    color: yellow;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Mooli', sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 10px;
+}
+
+.button:hover {
+    box-shadow: rgba(156, 187, 44, 0.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-0deg);
+}
+
+/*body*/
+
+body  {
+    background-color: rgb(1, 1, 43);
+    color: goldenrod;
+    }
+
+    h2 {
+        padding-top: 50px;
+    }
+    
+    h1, p, .header__btn-calc, body{
+        font-family: 'Mooli', sans-serif;
+        padding: 0;
+        margin :0
+     }
+    
+     @font-face {
+        font-family: 'Mooli';
+        src: url('../fonts/Mooli-Regular.ttf') format('truetype');
+        }
+    
+    span {
+            background-color: rgb(2, 2, 100);
+            color: gold;
+    }
+
+/* header */
+header {
+    position: fixed;
+    width: 100%;
+}
+
+.header__container {
+    background-color: rgb(1, 1, 43);
+    border-bottom: 1px solid goldenrod;
+}
+
+.header__wrapper {
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+    grid-gap: 10px;
+    grid-template-rows: repeat(2,1fr);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header__title {
+    color : goldenrod;
+    grid-column: 2;
+    grid-row: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__calc-choice {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    column-gap: 30px;
+    grid-column: 1;
+    grid-row: 1;
+}
+.header__niv-choice {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    column-gap: 30px;
+    padding-top: 10px;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.header__start {
+    grid-column: 3;
+    grid-row: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__btn-calc {
+    background-color: goldenrod;
+    border: solid goldenrod;
+    color: yellow;
+    width :40px;
+    border-radius : 5px; 
+}
+.header__btn-calc:hover {
+    background-color: yellow;
+    color: goldenrod;
+    transform: scale(1.05)
+}
+
+.header__btn-niv {
+    width: 35px;
+}
+
+/* Game area*/
+
+main {
+    background-image: url('../images/cosmic-160340_640.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    height: 90vh;
+
+    /*justify-content: center;*/
+    row-gap: 20px;
+    }
+
+    .zone-centrale  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bienvenue {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .connexion__wrapper {
+        display: grid;
+        grid-template-columns: 7fr 3fr 2fr;
+        grid-gap: 20px;
+        grid-template-rows: 1fr;
+        width: 100%;
+        text-align: center;
+        padding-top: 50px;
+    }
+    
+    .connexion {
+        grid-column: 1;
+        display: flex;
+        text-align: left;
+    }
+
+    .inscription {
+        grid-column: 2;
+        display: inline-block;
+        padding-top: 30px;
+        
+    }
+    .bienvenue__text {
+text-align: center;
+padding-bottom: 100px;
+
+
+    }
+
+    .retour {
+        grid-column: 2;
+        display: flex;
+       justify-content: end;
+        flex-direction: column;
+    }
+    .input {
+        background-color: goldenrod;
+        opacity: 0.8;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Mooli', sans-serif;
+        padding: 7px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: 0;
+        font-size: 16px;
+        margin: 10px;
+        display: inline-block;
+    }
+    label {
+        display: inline-block;
+        width : 200px;
+        margin-left: 50px;
+    }
+/* Footer */
+
+footer {
+position: fixed;
+width: 100%;
+}
+
+/*JS*/
+
+.selectionne {
+    background-color: goldenrod;
+    border: solid yellow 1px;
+    color: yellow;
+    scale : 1.2;
+    transition: 250ms;
+}
+
+.niv-select  {
+    scale: 1.4;
+    border : 0px;
+    transition: 250ms;
+}
+#codeCalcul {
+    color: white;
+}
+
+.hidden  {
+    display: none;
+}
+
+.list-group-item  {
+    display: inline-block;
+}
+
+.input-rep {
+    border: dotted 6px gold;
+    background-color: rgb(2, 2, 100,0.2);
+    height: 60px;
+    width: 60px;
+    text-align: right;
+    border-radius: 50%;
+    overflow: hidden;
+    color: yellow;
+}
+.input-rep:focus {
+    outline: none;
+    border: dotted 6px gold;
+    background-color: rgba(255,255,0,0.0);
+    height: 65px;
+    width: 65px;
+    transition: all 250ms;
+}
+
+.pseudo-deja-pris {
+    color : yellow;
+    font-size: x-large;
+}
+.icone-attention {
+    height: 20px
+}
+
+
+
+
+
+
