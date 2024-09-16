@@ -344,6 +344,7 @@ $('#btn-start').click((e) => {
     $('.game-area__wrapper').css('opacity',1),
     $('#btn-start').attr("disabled", "disabled").css('opacity','0.7');
     $('.input-rep').attr('readonly',false);
+    $('.header__choice').toggle(1000);
 
 let timerInterval = setInterval(diminuerTemps, 1000)
 
