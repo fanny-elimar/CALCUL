@@ -12,6 +12,9 @@ $(document).ready(() => {
     let mixNiv1Init = ['5 + 3','8 - 5','2 + 3','7 - 3','12 + 3','17 + 3','14 - 3','15 + 3','18 - 5','27 - 3']
     let mixNiv2Init = ['15 + 6', '18 - 5', '16 + 7', '25 - 7', '19 + 3', '27 - 6', '36 + 7', '28 - 10', '45 + 7', '38 - 6']
     let mixNiv3Init =  ['25 - 9','21 +13','12 - 3','42 - 8','32 + 11','28 - 9','42 - 13','15 + 23','52 - 3','17 + 17']
+    let multNiv1Init = ['2 * 3','2 * 5','2 * 4','4 * 8','2 * 7','8 * 3','4 * 4','5 * 4','6 * 3','7 * 3']
+    let multNiv2Init = ['5*6','7*6','4*8','8*7','9*5','3*5','7*7','6*6','9*9','7*3','6*4']
+    let multNiv3Init = ['9*6','7*6','4*12','25*4','9*7','3*50','5*11','6*8','25*6','15*4','8*7']
 
     let additionsNiv1RepInit = [5,7,6,10,9,15,15,18,4,10]
     let additionsNiv2RepInit = [21,23,23,22,21,32,33,31,42,42,42]
@@ -22,9 +25,12 @@ $(document).ready(() => {
     let mixNiv1RepInit = [8,3,5,4,15,20,11,18,13,24]
     let mixNiv2RepInit = [21,13,23,18,22,21,43,18,52,32]
     let mixNiv3RepInit = [16,34,9,34,43,19,29,38,49,34]
+    let multNiv1RepInit = [6,10,8,32,14,24,16,20,18,21]
+    let multNiv2RepInit = [30,42,32,56,45,15,49,36,81,21,24]
+    let multNiv3RepInit = [54,42,48,100,63,150,55,48,150,60,56]
 
 
-    let codeCalcul = 'D4';
+    let codeCalcul = 'E4';
 
 
 //Selection du niveau et affichage des calculs
@@ -34,6 +40,7 @@ $('#btn-soustraction').click((e) => {
     $('#btn-addition').removeClass("selectionne");
     $('#btn-soustraction').addClass("selectionne");
     $('#btn-mix').removeClass("selectionne");
+    $('#btn-mult').removeClass("selectionne");
     codeCalcul=codeCalcul.replace(codeCalcul[0],'B');
 
     let soustractionsNiv1 = [];
@@ -70,6 +77,7 @@ $('#btn-addition').click((e) => {
     $('#btn-addition').addClass("selectionne");
     $('#btn-soustraction').removeClass("selectionne");
     $('#btn-mix').removeClass("selectionne");
+    $('#btn-mult').removeClass("selectionne");
     codeCalcul=codeCalcul.replace(codeCalcul[0],'A');
 
     let additionsNiv1 = [];
@@ -105,6 +113,7 @@ $('#btn-addition').click((e) => {
     $('#btn-addition').removeClass("selectionne");
     $('#btn-soustraction').removeClass("selectionne");
     $('#btn-mix').addClass("selectionne");
+    $('#btn-mult').removeClass("selectionne");
     codeCalcul=codeCalcul.replace(codeCalcul[0],'C');
 
     let mixNiv1 = [];
@@ -135,6 +144,43 @@ $('#btn-addition').click((e) => {
     } 
 })
 
+$('#btn-mult').click((e) => {
+    e.stopPropagation ();
+    $('#btn-addition').removeClass("selectionne");
+    $('#btn-soustraction').removeClass("selectionne");
+     $('#btn-mix').removeClass("selectionne");
+    $('#btn-mult').addClass("selectionne");
+   
+    codeCalcul=codeCalcul.replace(codeCalcul[0],'D');
+
+    let multNiv1 = [];
+    let multNiv1Rep = [];
+    multNiv1 = multNiv1.concat(multNiv1Init);
+    multNiv1Rep = multNiv1Rep.concat(multNiv1RepInit);
+
+    let multNiv2 = [];
+    let multNiv2Rep = [];
+    multNiv2 = multNiv2.concat(multNiv2Init);
+    multNiv2Rep = multNiv2Rep.concat(multNiv2RepInit);
+
+    let multNiv3 = [];
+    let multNiv3Rep = [];
+    multNiv3 = multNiv3.concat(multNiv3Init);
+    multNiv3Rep = multNiv3Rep.concat(multNiv3RepInit);
+
+    switch (codeCalcul) {
+        case 'D1' :   
+        calcul(multNiv1,multNiv1Rep);
+            break;
+        case  'D2' :
+           calcul(multNiv2,multNiv2Rep);
+            break;
+       case  'D3' :
+            calcul(multNiv3,multNiv3Rep);
+            break;
+    } 
+})
+
  $('#btn-niv1').click((e) => {
     e.stopPropagation ();
     $('#btn-niv1').addClass("niv-select");
@@ -157,6 +203,11 @@ $('#btn-addition').click((e) => {
     mixNiv1 = mixNiv1.concat(mixNiv1Init);
     mixNiv1Rep = mixNiv1Rep.concat(mixNiv1RepInit);
 
+    let multNiv1 = [];
+    let multNiv1Rep = [];
+    multNiv1 = multNiv1.concat(multNiv1Init);
+    multNiv1Rep = multNiv1Rep.concat(multNiv1RepInit);
+
     switch (codeCalcul) {
         case 'A1' :
             calcul(additionsNiv1,additionsNiv1Rep);
@@ -166,6 +217,9 @@ $('#btn-addition').click((e) => {
             break;
         case  'C1' :
            calcul(mixNiv1,mixNiv1Rep);
+            break;
+        case  'D1' :
+            calcul(multNiv1,multNiv1Rep);
             break;
     } 
 })
@@ -192,6 +246,11 @@ $('#btn-addition').click((e) => {
     mixNiv2 = mixNiv2.concat(mixNiv2Init);
     mixNiv2Rep = mixNiv2Rep.concat(mixNiv2RepInit);
 
+    let multNiv2 = [];
+    let multNiv2Rep = [];
+    multNiv2 = multNiv2.concat(multNiv2Init);
+    multNiv2Rep = multNiv2Rep.concat(multNiv2RepInit);
+
     switch (codeCalcul) {
         case 'A2' :
             calcul(additionsNiv2,additionsNiv2Rep);
@@ -201,6 +260,9 @@ $('#btn-addition').click((e) => {
             break;
         case  'C2' :
             calcul(mixNiv2,mixNiv2Rep);
+            break;
+        case  'D2' :
+            calcul(multNiv2,multNiv2Rep);
             break;
     }
  })
@@ -227,6 +289,11 @@ $('#btn-addition').click((e) => {
     mixNiv3 = mixNiv3.concat(mixNiv3Init);
     mixNiv3Rep = mixNiv3Rep.concat(mixNiv3RepInit);
 
+    let multNiv3 = [];
+    let multNiv3Rep = [];
+    multNiv3 = multNiv3.concat(multNiv3Init);
+    multNiv3Rep = multNiv3Rep.concat(multNiv3RepInit);
+
     switch (codeCalcul) {
         case 'A3' :
             calcul(additionsNiv3,additionsNiv3Rep);
@@ -236,6 +303,9 @@ $('#btn-addition').click((e) => {
             break;
         case  'C3' :
             calcul(mixNiv3,mixNiv3Rep);
+            break;
+        case  'D3' :
+            calcul(multNiv3,multNiv3Rep);
             break;
     }
  })
@@ -344,6 +414,7 @@ $('#btn-start').click((e) => {
     $('.game-area__wrapper').css('opacity',1),
     $('#btn-start').attr("disabled", "disabled").css('opacity','0.7');
     $('.input-rep').attr('readonly',false);
+    $('.header__choice').toggle(1000);
 
 let timerInterval = setInterval(diminuerTemps, 1000)
 
@@ -480,6 +551,7 @@ else if (!timerOn) {
         $('#btn-addition').attr("disabled", "disabled").css('opacity','0.7');
     $('#btn-soustraction').attr("disabled", "disabled").css('opacity','0.7');
     $('#btn-mix').attr("disabled", "disabled").css('opacity','0.7');
+    $('#btn-mult').attr("disabled", "disabled").css('opacity','0.7');
     $('#btn-niv1').attr("disabled", "disabled").css('opacity','0.7');
     $('#btn-niv2').attr("disabled", "disabled").css('opacity','0.7');
     $('#btn-niv3').attr("disabled", "disabled").css('opacity','0.7');
