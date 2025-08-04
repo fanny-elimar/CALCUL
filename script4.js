@@ -402,6 +402,8 @@ let rAnswer10 = additionsRep[rand10];
     additions.splice(rand10,1)
     additionsRep.splice(rand10,1)
 
+$('#btn-start').removeClass('disabled');
+
 
 //Lancer le chrono
 
