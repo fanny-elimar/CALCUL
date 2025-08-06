@@ -4,7 +4,10 @@
 max-width: 1000px;
 margin-left: auto;
 margin-right: auto;
+}
 
+main {
+    min-height: calc(100vh - 80px);
 }
 
 /* boutons */
@@ -150,13 +153,13 @@ button.disabled:hover {
 
 /* Game area*/
 
-main {
+.game-area.flux {
     background-image: url('../images/cosmic-160340_640.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
+  background-size: auto 100%;   /* Hauteur à 100%, largeur auto */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  width: 100%;                   /* Largeur totale */
     /*justify-content: center;*/
     }
 
@@ -371,11 +374,14 @@ height: 50px;
 
 /* Footer */
 
-footer {
+.footer__container {
 width: 100%;
-border: solid 1px;
+/*border: solid 1px;*/
 display: flex;
 height: auto;
+margin: auto;
+margin-bottom: 10px;
+text-align: center;
 }
 
 /*JS*/
@@ -401,10 +407,6 @@ height: auto;
     display: none;
 }
 
-.list-group-item  {
-
-}
-
 .input-rep {
     border: dotted 6px gold;
     background-color: rgb(2, 2, 100,0.2);
@@ -423,6 +425,31 @@ height: auto;
     width: 65px;
     transition: all 250ms;
 }
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ffd96686;
+  padding: 1rem;
+  border-top: 1px solid #ffd96686;
+   
+}
+
+.footer a {
+  color: #ffe98fb1;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .year {
+    background-color:transparent;
+    color: inherit;
+    font-size: inherit;
+}
+
 
 
 

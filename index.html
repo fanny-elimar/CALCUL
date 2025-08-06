@@ -32,7 +32,8 @@
             </div>
         </div>
     </header>
-    <main class="game-area flux">
+    <main >
+        <div class="game-area flux">
         <div class="game-area__wrapper">
             <div class="game-area__cell-1">
                 <span id="calc1" class="calc">
@@ -191,20 +192,22 @@
                 </div>
             </div>
         </div>
-    </main>
-    <footer>
-            <div class="footer__container flux">
-                <div class="col">
-                    <button class="button" type="button" id="btn-valider">Valider</button>
-                    <button type="button" id="btn-reload" class="button">Rejouer</button>
-                    
-                    <a href="logout.php" type="button" class="button d-none">Accueil</a>
-                    
-                </div>
-                
+    </div>
+        <div class="footer__container flux mb-3">
+            <div class="col">
+                <button class="button" type="button" id="btn-valider">Valider</button>
+                <button type="button" id="btn-reload" class="button">Rejouer</button>
+                <a href="logout.php" type="button" class="button d-none">Accueil</a>
             </div>
-    </footer>
-
+        </div>
+    </main>
+<footer class="footer">
+  <p>
+    &copy; <span class="year" id="year"></span> — Site créé par 
+    <a href="https://apyggo.com" target="_blank">Apyggo</a> — 
+    Hébergé sur <a href="https://github.com" target="_blank">GitHub</a>
+  </p>
+</footer>
 
 <script src="assets/JQUERY/jQuery2.js"></script>
 <script src="script4.js"></script>
